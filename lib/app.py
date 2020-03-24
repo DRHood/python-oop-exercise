@@ -55,10 +55,10 @@ class Workshop:
             print('{}. {} - {}'.format(i + 1, student.full_name, student.reason))
         print()
         print('Instructors')
-        for instructor in self.instructors:
-            for instructor in self.instructors:
-            print('{} - {}'.format(instructor.full_name, ', '.join(instructor.skills)))
-            print('{}'.format(instructor.bio))
+        for i in range(len(self.instructors)):
+            instructor = self.instructors[i]
+            print('{}. {} - {}'.format(i + 1, instructor.full_name, ', '.join(instructor.skills)))
+            print('   {}'.format(instructor.bio))
 
 # testy things
 workshop = Workshop("12/03/2014", "Shutl")
