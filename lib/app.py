@@ -50,8 +50,9 @@ class Workshop:
         print('Workshop - {} - {}'.format(self.date, self.subject))
         print()
         print('Students')
-        for student in self.students:
-            print('{} - {}'.format(student.full_name, student.reason))
+        for i in range(len(self.students)):
+            student = self.students[i]
+            print('{}. {} - {}'.format(i + 1, student.full_name, student.reason))
         print()
         print('Instructors')
         for instructor in self.instructors:
