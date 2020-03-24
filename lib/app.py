@@ -30,16 +30,34 @@ class Workshop:
     def __init__(self, date, subject):
         self.date = date
         self.subject = subject
-        self.participants = []
+        self.instructors = []
+        self.instructors = []
 
-    def add_participant(self, partic):
-        self.participants.append(partic)
+    def add_participant(self, new_participant):
+        if isinstance(new_participant, Instructor)
+            self.instructors.append(new_participant)
+        elif isinstance(new_participant, Student)
+            self.students.append(new_participant)
+
 
     def get_participants(self):
         participant_list = []
         for participant in self.participants:
             participant_list.append(participant.full_name)
         return participant_list
+
+    def print_details(self):
+        print('Workshop - {} - {}'.format(self.date, self.subject))
+        print()
+        print('Students')
+        for student in self.students:
+            print('{} - {}'.format(student.full_name, student.reason))
+        print()
+        print('Instructors')
+        for instructor in self.instructors:
+            for instructor in self.instructors:
+            print('{} - {}'.format(instructor.full_name, ', '.join(instructor.skills)))
+            print('{}'.format(instructor.bio))
 
 # testy things
 workshop = Workshop("12/03/2014", "Shutl")
